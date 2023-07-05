@@ -1,0 +1,80 @@
+;
+; KmRootkit.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=KmRootkit.cat
+DriverVer = 06/03/2023,0.37.0.515
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+KmRootkit_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+KmRootkit.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%KmRootkit.DeviceDesc%=KmRootkit_Device, Root\KmRootkit ; TODO: edit hw-id
+
+[KmRootkit_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+KmRootkit.sys
+
+;-------------- Service installation
+[KmRootkit_Device.NT.Services]
+AddService = KmRootkit,%SPSVCINST_ASSOCSERVICE%, KmRootkit_Service_Inst
+
+; -------------- KmRootkit driver install sections
+[KmRootkit_Service_Inst]
+DisplayName    = %KmRootkit.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\KmRootkit.sys
+
+;
+;--- KmRootkit_Device Coinstaller installation ------
+;
+
+[KmRootkit_Device.NT.CoInstallers]
+AddReg=KmRootkit_Device_CoInstaller_AddReg
+CopyFiles=KmRootkit_Device_CoInstaller_CopyFiles
+
+[KmRootkit_Device_CoInstaller_AddReg]
+;
+
+
+[KmRootkit_Device_CoInstaller_CopyFiles]
+;
+
+
+[KmRootkit_Device.NT.Wdf]
+KmdfService =  KmRootkit, KmRootkit_wdfsect
+[KmRootkit_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "KmRootkit Installation Disk"
+KmRootkit.DeviceDesc = "KmRootkit Device"
+KmRootkit.SVCDESC = "KmRootkit Service"

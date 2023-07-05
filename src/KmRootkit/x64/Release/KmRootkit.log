@@ -1,0 +1,25 @@
+﻿C:\Users\ilay\source\repos\KmRootkit\KmRootkit\KmRootkit.vcxproj(65,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\WindowsDriver.Shared.props (352,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\KmRootkit.vcxproj(153,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets" cannot be imported again. It was already imported at "C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\WindowsDriver.common.targets (1917,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+  Building 'KmRootkit' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\KmRootkit.inf
+  Stamping [Version] section with DriverVer=07/05/2023,4.11.11.561
+  KmRootkit.vcxproj -> C:\Users\ilay\source\repos\KmRootkit\x64\Release\KmRootkit.sys
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\KmRootkit.vcxproj(65,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\WindowsDriver.Shared.props (352,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\KmRootkit.vcxproj(153,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets" cannot be imported again. It was already imported at "C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\WindowsDriver.common.targets (1917,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+  Driver is 'Universal'.
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\ilay\source\repos\KmRootkit\x64\Release\KmRootkit\kmrootkit.cat
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\KmRootkit.vcxproj(65,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.props" cannot be imported again. It was already imported at "C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\WindowsDriver.Shared.props (352,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\KmRootkit.vcxproj(153,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets" cannot be imported again. It was already imported at "C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\WindowsDriver.common.targets (1917,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+  Done Adding Additional Store
+  Successfully signed: C:\Users\ilay\source\repos\KmRootkit\x64\Release\KmRootkit\kmrootkit.cat
+  

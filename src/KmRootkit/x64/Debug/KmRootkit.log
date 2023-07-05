@@ -1,0 +1,13 @@
+﻿  Building 'KmRootkit' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Debug\KmRootkit.inf
+  Stamping [Version] section with DriverVer=06/28/2023,1.17.4.811
+  File.c
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\File.c(59,1): error C2220: the following warning is treated as an error
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\File.c(59,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'NTSTATUS (__cdecl *)(HANDLE,HANDLE,PIO_APC_ROUTINE,PVOID,PIO_STATUS_BLOCK,PVOID,ULONG,FILE_INFORMATION_CLASS,BOOLEAN,PUNICODE_STRING,BOOLEAN)'
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\File.c(125,37): warning C4101: 'next_info': unreferenced local variable
+  IDTHook.c
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\IDTHook.c(30,44): error C2220: the following warning is treated as an error
+C:\Users\ilay\source\repos\KmRootkit\KmRootkit\IDTHook.c(30,44): warning C4305: 'type cast': truncation from 'char *' to 'UINT16'
+  Process.c
+  Utilities.c
+  Generating Code...
